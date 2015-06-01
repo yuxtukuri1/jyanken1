@@ -1,0 +1,76 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>じゃんけん</title>
+<link rel="stylesheet"href="style1.css
+.
+
+">
+
+<script type="text/javascript">
+window.onload = init;
+var scoreBox;
+function init(){
+	countBox = document.form.count;
+	scoreBox = document.form.score;
+}
+
+hand = new Array("グー","チョキ","パー");
+countBox.value = 0;
+	
+
+function bhand(btn) {
+	r = Math.floor(Math.random() * 3);
+	document.getElementById("ahand").innerHTML = hand[r];
+	document.getElementById("bhand").innerHTML = hand[btn];
+	countBox = count + 1;
+	scoreBox.value = 100;	
+}
+
+
+</script>
+
+</head>
+<body>
+<h3>じゃんけん</h3>
+<hr>
+<table border = solid align="center">
+	<tr>
+		<th><div id="ahand"></div></th>
+		<th>VS</th>
+		<th><div id="bhand"></div></th>
+	</tr>
+	
+	<tr>
+		<th>相手</th>
+			<td>&nbsp;</td>
+		<th>自分</th>
+	</tr>
+	
+	<tr>
+		<th colspan="3">&nbsp;</th>
+	</tr>
+	
+	<tr>
+		<th colspan="3"><form name="janken">
+
+	<table border="0" align="center">
+<tr>
+<td colspan="3">なにをだそうかな？</td>
+</tr>
+<tr>
+<th><input type="button" onClick="bhand(0)" value="グー"></th>
+<th><input type="button" onClick="bhand(1)" value="チョキ"></th>
+<th><input type="button" onClick="bhand(2)" value="パー"></th>
+</tr>
+</form></th>
+</tr>
+</table>
+<form name = "form">
+<p>試合回数<input type="text" name="count" width="50"></p>
+<p>勝利回数<input type="text" name="score" width="50"></p>
+<p>勝率<input type="text" name="persent" width="50">％</p>
+</form>
+</body>
+</html>

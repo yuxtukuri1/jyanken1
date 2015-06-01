@@ -1,0 +1,7 @@
+/* STEP 7-6 */
+@import url(http://fonts.googleapis.com/css?family=Bowlby+One);
+
+article *	{background-color: inherit}
+article time	{display: inline-block}
+
+body	{background-color: #ddeedd;}
